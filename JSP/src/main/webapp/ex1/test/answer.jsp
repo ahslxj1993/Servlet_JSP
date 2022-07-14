@@ -4,6 +4,19 @@
 <html>
 <head>
 <title>answer.jsp</title>
+
+<style>
+	table {
+	margin : 0 auto;
+	border-collapse : collapse;
+	width: 500px;
+	}
+	
+	tr {
+	border-bottom : 1px solid black;
+	height: 3em;
+	}
+</style>
 </head>
 <body>
 	<table>
@@ -19,12 +32,12 @@
 		
 		<tr>
 			<td>주민번호</td>
-			<td> <%= request.getAttribute("jumin1") %> - <%= request.getAttribute("jumin2") %></td>
+			<td> <%= request.getAttribute("jumin") %></td>
 		</tr>
 		
 		<tr>
 			<td>이메일</td>
-			<td><%= request.getAttribute("email") %>@ <%= request.getAttribute("domain") %></td>
+			<td><%= request.getAttribute("email") %></td>
 		</tr>
 		
 		<tr>
