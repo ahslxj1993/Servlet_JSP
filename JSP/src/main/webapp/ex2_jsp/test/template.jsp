@@ -10,9 +10,7 @@
 footer {
 position: fixed;  bottom : 10px; width: 100%; text-align: center
 }
-header{
- top:10px; width:100%; text-align: right; color: white; background:green;
-}
+
 </style>
 </head>
 <body>
