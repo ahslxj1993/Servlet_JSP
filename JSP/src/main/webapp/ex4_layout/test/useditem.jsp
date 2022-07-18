@@ -3,7 +3,7 @@
 <%--https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_filters_table&stacked=h --%>
 
 <div class="container mt-3">
-  <h2>인기 목록  Table</h2>
+  <h2>중고상품  Table</h2>
   <p>상품입력하세요.</p>  
   <input class="form-control" id="myInput" type="search" placeholder="Search..">
   <br>
@@ -17,24 +17,24 @@
     </thead>
     <tbody id="myTable">
       <tr>
-        <td>참치</td>
+        <td>휴지</td>
+        <td>10</td>
+        <td>화장실</td>
+      </tr>
+      <tr>
+        <td>면도기</td>
+        <td>30000</td>
+        <td>파나소닉</td>
+      </tr>
+      <tr>
+        <td>후시딘</td>
         <td>1000</td>
-        <td>동원</td>
+        <td>동화약품</td>
       </tr>
       <tr>
-        <td>비타민</td>
-        <td>100</td>
-        <td>건강한 나라</td>
-      </tr>
-      <tr>
-        <td>오징어</td>
-        <td>700</td>
-        <td>바다</td>
-      </tr>
-      <tr>
-        <td>에어컨</td>
-        <td>300</td>
-        <td>시원한나라</td>
+        <td>사이다</td>
+        <td>30</td>
+        <td>칠성</td>
       </tr>
     </tbody>
   </table>

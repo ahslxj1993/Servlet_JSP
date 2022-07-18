@@ -6,13 +6,13 @@
 <meta charset="EUC-KR">
 <title>login.jsp</title>
 <link href="../../css/ch03-1.css" type="text/css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-
 </head>
 <body>
-<form action="bestitem.jsp" method="get">
-	아이디 : <input type="text" name="id" required><br>
-	비밀번호 : <input type="password" name="passwd" required><br>
+<form action="login_ok.jsp" method="post">
+	<h1>로그인</h1>
+	<hr>
+	<b>아이디</b><input type="text" name="id" placeholder="Enter id" required><br>
+	<b>비밀번호</b><input type="password" name="passwd" placeholder="Enter password" required><br>
 	<div class="clearfix">
 		<button type="submit" class="submitbtn">전송</button>
 		<button type="reset" class="cancelbtn">취소</button>
