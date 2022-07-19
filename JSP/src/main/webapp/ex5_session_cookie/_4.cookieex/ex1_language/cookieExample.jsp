@@ -19,7 +19,7 @@
 		//쿠키의 이름이 "language1" 인 값을 찾기위해 쿠키 배열들을 모두 확인합니다
 		for (int i=0 ; i<cookies.length; i++) {
 			if(cookies[i].getName().equals("language1")) {
-				language =cookies[i].getValue(); //쿠키의 이름을 가져옵니다
+				language =cookies[i].getValue(); //쿠키의 밸류를 가져옵니다
 			}
 		}//for end
 	}

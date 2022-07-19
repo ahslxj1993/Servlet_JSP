@@ -6,6 +6,7 @@
 
 <%--파일 이름 중복 처리를 하기 위해 DefaultFileRenamePolicy 객체를 import 합니다 --%>
 <%@ page import = "com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
+<%@ page trimDirectiveWhitespaces= "true" %>
 
 <%
 String uploadPath = application.getRealPath("upload");
@@ -52,12 +53,23 @@ try{
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>파일 업로드</title>
 </head>
 <body>
 <br>
-<form action="fileCheck2.jsp" method="post" enctype="multipart/form-data">
-	<input type="submit" value="파일 다운로드 폼으로 이동">
+<form name="filecheck" action="fileCheck2.jsp" method="post">
+	<input type="hidden" name="name" value="<%=name %>">
+	<input type="hidden" name="subject" value="<%=subject %>">
+	
+	<input type="hidden" name="systemName1" value="<%=systemName1 %>">
+	<input type="hidden" name="systemName2" value="<%=systemName2 %>">
+	
+	<input type="hidden" name="origfileName1" value="<%=origfileName1 %>">
+	<input type="hidden" name="origfileName2" value="<%=origfileName2 %>">
+	
+	<input type="hidden" name="uploadPath" value="<%=uploadPath %>">
+	
+	<input type="submit" value="업로드 확인 및 다운로드 페이지 이동">
 </form>
 </body>
 </html>

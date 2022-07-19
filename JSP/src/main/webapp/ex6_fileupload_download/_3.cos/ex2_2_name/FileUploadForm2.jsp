@@ -15,6 +15,7 @@ method는 post 방식입니다
 
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ page trimDirectiveWhitespaces= "true" %>
 <html>
 <head>
 <title>FileUpload Form</title>

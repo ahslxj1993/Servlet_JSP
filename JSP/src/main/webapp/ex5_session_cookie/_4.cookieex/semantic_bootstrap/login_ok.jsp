@@ -16,7 +16,7 @@
 
 <%
 		String check_value = request.getParameter("remember");
-		Cookie cookie = new Cookie("id",request.getParameter("id"));
+		Cookie cookie = new Cookie("id", request.getParameter("id"));
 		//아이디 기억하기를 체크한 경우
 		if (check_value != null && check_value.equals("store")) {
 			cookie.setMaxAge(2*60);//유효시간 2분
