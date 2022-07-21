@@ -1,33 +1,6 @@
 $(document).ready(function() {
 
-	//ID 중복검사에 사용된 아이디를 저장할 변수입니다
-	var idcheck_value = ''; //id 중복검사시 값
 	
-	//아이디 중복검사
-	$('#idcheck').click(function() {
-		var input_id = $.trim($('#id').val());
-		if (input_id == "") {//아이디 입력을 안했을때
-			alert("ID를 입력하세요");
-			$('#id').focus();
-			return false;
-		} else { //아이디를 입력했을때
-			//첫글자는 대문자이고 두번째부터는 대소문자, 숫자, _ 로 총 4개이상
-			pattern = /^[A-Z][a-zA-Z_0-9]{3,}$/;
-
-			if (pattern.test(input_id)) { //id 값이 정규 표현식을 만족하는지 체크합니다
-				idcheck_value = input_id;
-				
-				//아이디 체크 화면링크
-				var ref = "idcheck?id=" + $('#id').val();
-
-				//팝업창을 이용해 자료를 넘김
-				window.open(ref, "idcheck", "width=350, height=250")
-			} else {
-				alert("첫글자는 대문자이고 두번째부터는 대소문자,숫자,_로 총 4개 이상이어야 합니다.");
-				$('#id').val('').focus();
-			}
-		}
-	})//click value=ID중복검사 input
 	
 	
 	$('form').submit(function() {
@@ -38,20 +11,7 @@ $(document).ready(function() {
 			return false;
 		}
 		
-		//아이디 중복검사 유효성 검사
-		var submit_id_value=$.trim($('#id').val());
-		if(submit_id_value != idcheck_value) { //submit 당시 아이디 값과 아이디 중복검사에 사용된 아이디를 비교합니다
-			alert("ID중복검사를 실행해주세요");
-			return false;
-		}
-		
-		var result=$("#result").val();
-		if (result==='-1'){
-			alert("사용가능한 아이디로 다시 입력하세요");
-			$("#id").val('').focus;
-			$('#opener_message').text('');
-			return false
-		}
+
 
 		//패스워드 공백 유효성 검사
 		if ($('#pass').val().trim() == '') {

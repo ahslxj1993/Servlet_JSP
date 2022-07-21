@@ -29,14 +29,30 @@
   	height: 2rem;
   }
   </style>
+
 </head>
+
+<body>
 <%
 	String pagefile = (String)request.getAttribute("pagefile");
 %>
-
-
-
-<body>
+<script>
+	var result = '<%=session.getAttribute("join_result")%>';
+	if(result != 'null'){ //세션 객체에 "join_result" 속성이 없으면 result는 'null'입니다.
+		  if(result==='1'){
+			  alert('회원 가입을 축하합니다.');
+		  }else{
+			  alert('회원 가입에 실패하셨습니다.');
+		  }
+	  <%session.removeAttribute("join_result"); %>
+	}
+	
+	  var message='<%=request.getAttribute("message") %>'; /* Login_OK.java, Update.java 에서 설정 */
+	     if(message!='null'){
+	    	 alert(message);  
+	  }
+    
+</script>
 
 <header>
 	<div class="jumbotron text-center" style="margin-bottom :0">

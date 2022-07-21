@@ -6,12 +6,6 @@
 <meta charset="euc-kr">
 <title>Insert title here</title>
 <link  href="<%=request.getContextPath()%>/ex8_db/_4.join/NewFile.css" rel="stylesheet" type="text/css">
-<style>
-#opener_message {
-	margin-top : -10px;
-	margin-bottom : 10px;
-}
-</style>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script> 
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script src="<%=request.getContextPath()%>/ex8_db/_4.join/validate3.js"></script>
@@ -20,12 +14,11 @@
 	<form action="join_ok" name="myform" id="myform" method="post">
 		<div class=container>
 		<fieldset>
-			<legend>회원가입</legend>
+			<legend>유효성 검사</legend>
 			<label for="id">ID</label>
 			<div>
 			<input type=text size=10 name=id id=id placeholder='Enter ID'>
-			<input type=button value=ID중복검사 id="idcheck">
-			<div id="opener_message"></div><input  type="hidden" id="result">
+			<input type=button value=ID중복검사>
 			</div>
 			
 			<label for=pass>비밀번호</label>
