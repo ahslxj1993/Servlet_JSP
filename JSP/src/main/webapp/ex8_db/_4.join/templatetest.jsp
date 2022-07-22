@@ -47,10 +47,12 @@
 	  <%session.removeAttribute("join_result"); %>
 	}
 	
-	  var message='<%=request.getAttribute("message") %>'; /* Login_OK.java, Update.java 에서 설정 */
+	var message='<%=request.getAttribute("message") %>'; /* Login_OK.java, Update.java 에서 설정 */
 	     if(message!='null'){
 	    	 alert(message);  
 	  }
+	
+	
     
 </script>
 
@@ -96,6 +98,7 @@
 		}
 	}
 </script>
+
 
 </body>
 </html>

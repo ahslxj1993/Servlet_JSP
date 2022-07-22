@@ -11,7 +11,25 @@ $(document).ready(function() {
 			return false;
 		}
 		
-
+		if(!$("#id").prop('readOnly')){	//회원가입폼과 정보수정 폼에서 동시에 사용할 js입니다
+										//회원가입 폼에서만 사용할 문장들 입니다.
+										//정보수정 폼에서는 아이디를 수정하지 않기 때문에 필요없는 부분입니다
+			console.log($("#id").prop('readOnly'))
+			var submit_id_value = $.trim($("#id").val())
+			if(submit_id_value != idcheck_value) { //submit 당시 아이디값과 아이디 중복검사에 사용된 아이디를 비교합니다
+				alert("ID중복검사를 하세요");
+				return false
+			}
+			
+			//아이디 중복검사를 했지만 사용중인 아이디인 경우에는 submit시 경고창이 나타납니다
+			var result = $("#result").val();
+			if (result === '-1'){
+				alert("사용가능한 아이디로 다시 입력하세요");
+				$("#id").val('').focus();
+				$("#opener_message").text('');
+				return false;
+			}
+		}
 
 		//패스워드 공백 유효성 검사
 		if ($('#pass').val().trim() == '') {
@@ -158,6 +176,7 @@ $(document).ready(function() {
 				var index = (c - 1) % 2; //c=1 or c=3 -> index=0 -> 1 -> "gender1"
 				//c=2 or c=4 -> index=1 ->2 -> "gender2"
 				$('input[type=radio]').eq(index).prop('checked', true);
+				$('input[type=radio]').not(':checked').prop("disabled",true);
 			} else {
 				alert('숫자 또는 형식에 맞게 입력하세요');
 				$(this).val('');
