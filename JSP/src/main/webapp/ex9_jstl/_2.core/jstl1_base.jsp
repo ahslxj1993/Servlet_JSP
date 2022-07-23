@@ -149,5 +149,9 @@
 <h3>
  <c:out value="${a}"/>
 </h3>
+
+<c:set var="myname" value="sijoon"/>
+
+<c:out value="${myname }" />
 </body>
 </html>
